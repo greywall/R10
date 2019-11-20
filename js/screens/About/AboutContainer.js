@@ -12,6 +12,9 @@ class AboutContainer extends React.Component {
     };
   }
 
+  staticNavigationOption = {
+    title: 'About',
+  };
   render() {
     return <About />;
   }

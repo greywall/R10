@@ -1,7 +1,7 @@
 import React from 'react';
-import Faves from './Faves';
+import Map from './Map';
 
-class FavesContainer extends React.Component {
+class MapContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,8 +11,8 @@ class FavesContainer extends React.Component {
   }
 
   render() {
-    return <Faves />;
+    return <Map />;
   }
 }
 
-export default FavesContainer;
+export default MapContainer;

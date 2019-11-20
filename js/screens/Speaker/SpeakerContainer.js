@@ -1,7 +1,7 @@
 import React from 'react';
-import Faves from './Faves';
+import Speaker from './Speaker';
 
-class FavesContainer extends React.Component {
+class SpeakerContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,8 +11,8 @@ class FavesContainer extends React.Component {
   }
 
   render() {
-    return <Faves />;
+    return <Speaker />;
   }
 }
 
-export default FavesContainer;
+export default SpeakerContainer;

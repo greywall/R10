@@ -17,10 +17,10 @@ export const colors = {
 
 export const typography = {
   baseSize: 16,
-  fontMainLight: 'Montserrat-Light',
+  // fontMainLight: 'Montserrat-Light',
   ...Platform.select({
     ios: {
-      fontMain: 'Montserrat',
+      // fontMain: 'Montserrat-Light',
     },
     android: {
       fontMain: 'Montserrat-Regular',

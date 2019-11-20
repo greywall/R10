@@ -5,6 +5,7 @@ import About from '../screens/About';
 import Faves from '../screens/Faves';
 import Map from '../screens/Map';
 import Schedule from '../screens/Schedule';
+import Session from '../screens/Session';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {colors, typography} from '../config/styles';
 import {sharedNavigationOptions} from './config';
@@ -13,6 +14,7 @@ const {black, mediumGrey, white, lightGrey, coralblue} = colors;
 const ScheduleStack = createStackNavigator(
   {
     Schedule: Schedule,
+    Session: Session,
   },
   {
     defaultNavigationOptions: ({navigation}) => ({
@@ -92,7 +94,7 @@ export default createBottomTabNavigator(
       inactiveTintColor: lightGrey,
       labelStyle: {
         fontSize: 10,
-        // fontFamily: typography.fontMain,
+        fontFamily: typography.fontMain,
       },
       tabStyle: {
         backgroundColor: black,

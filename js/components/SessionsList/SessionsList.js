@@ -1,5 +1,11 @@
 import React from 'react';
-import {SectionList, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Platform,
+  SectionList,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import moment from 'moment';
 import {withNavigation} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';

@@ -4,6 +4,8 @@ import {Header} from 'react-navigation-stack';
 import LinearGradient from 'react-native-linear-gradient';
 import {colors, typography} from '../config/styles';
 const {white, purple, red} = colors;
+import Icon from 'react-native-vector-icons/Ionicons';
+import {Platform} from 'react-native';
 
 const GradientHeader = props => (
   <View style={{backgroundColor: white, overflow: 'hidden'}}>
@@ -16,8 +18,6 @@ const GradientHeader = props => (
     <Header {...props} />
   </View>
 );
-
-// ...
 export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
   header: props => <GradientHeader {...props} />,
@@ -26,7 +26,18 @@ export const sharedNavigationOptions = navigation => ({
   },
   headerTitleStyle: {
     color: white,
-    // fontFamily: typography.fontMain
+    fontFamily: typography.fontMain,
   },
   headerTintColor: white,
+  headerLeft: Platform.OS != 'ios' && (
+    <View style={{paddingLeft: 16}}>
+      <Icon
+        color="#fff"
+        name="md-menu"
+        size={50}
+        style={({paddingLeft: 20}, {paddingRight: 20})}
+        onPress={() => navigation.toggleDrawer()}
+      />
+    </View>
+  ),
 });

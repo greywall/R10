@@ -29,15 +29,26 @@ export const sharedNavigationOptions = navigation => ({
     fontFamily: typography.fontMain,
   },
   headerTintColor: white,
-  headerLeft: Platform.OS != 'ios' && (
+  headerLeft: Platform.OS !== 'ios' && (
     <View style={{paddingLeft: 16}}>
-      <Icon
-        color="#fff"
-        name="md-menu"
-        size={50}
-        style={({paddingLeft: 20}, {paddingRight: 20})}
-        onPress={() => navigation.toggleDrawer()}
-      />
+      {navigation.routeName === 'Session' ? (
+        <Icon
+          name={'chevron-left'}
+          onPress={() => {
+            goBack();
+          }}
+        />
+      ) : (
+        <Icon
+          color="#fff"
+          name="md-menu"
+          size={50}
+          style={({paddingLeft: 20}, {paddingRight: 20})}
+          onPress={() => navigation.toggleDrawer()}
+        />
+      )}
     </View>
   ),
 });
+
+// routeName

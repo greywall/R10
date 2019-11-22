@@ -24,3 +24,22 @@ export const ALL_DATA_QUERY = gql`
     }
   }
 `;
+
+export const Session_DATA = gql`
+  query session($id: ID!) {
+    Session(id: $id) {
+      id
+      description
+      location
+      startTime
+      title
+      speaker {
+        id
+        name
+        image
+        bio
+        url
+      }
+    }
+  }
+`;

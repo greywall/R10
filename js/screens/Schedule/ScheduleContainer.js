@@ -12,7 +12,7 @@ class ScheduleContainer extends React.Component {
         {({loading, error, data}) => {
           if (loading) return <Text>Loading</Text>;
           if (error) return <Text>{error.message}/</Text>;
-          console.log(data);
+
           if (data) {
             return <Schedule allSessions={data.allSessions} />;
           }

@@ -67,13 +67,13 @@ const MapStack = createStackNavigator(
 
 MapStack.navigationOptions = {
   drawerIcon: ({tintColor}) => (
-    <Icon name={'md-heart'} size={25} color={tintColor} />
+    <Icon name={'ios-map'} size={25} color={tintColor} />
   ),
 };
 
 ScheduleStack.navigationOptions = {
   drawerIcon: ({tintColor}) => (
-    <Icon name={'md-heart'} size={25} color={tintColor} />
+    <Icon name={'ios-calendar'} size={25} color={tintColor} />
   ),
 };
 
@@ -85,7 +85,7 @@ FavesStack.navigationOptions = {
 
 AboutStack.navigationOptions = {
   drawerIcon: ({tintColor}) => (
-    <Icon name={'md-heart'} size={25} color={tintColor} />
+    <Icon name={'ios-information-circle'} size={25} color={tintColor} />
   ),
 };
 

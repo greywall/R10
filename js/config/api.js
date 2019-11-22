@@ -43,3 +43,14 @@ export const Session_DATA = gql`
     }
   }
 `;
+
+export const CONDUCT_QUERY = gql`
+  query {
+    allConducts {
+      id
+      description
+      title
+      order
+    }
+  }
+`;

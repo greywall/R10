@@ -1,22 +1,34 @@
 import React from 'react';
-import Text from 'react-native';
+import {Text} from 'react-native';
 import About from './About';
 import styles from './styles';
+import {CONDUCT_QUERY} from '../../config/api';
+import {Query} from 'react-apollo';
 
 class AboutContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      data: null,
-      load: true,
-    };
+    this.state = {};
   }
 
   staticNavigationOption = {
     title: 'About',
   };
   render() {
-    return <About />;
+    return (
+      <Query query={CONDUCT_QUERY}>
+        {({loading, error, data}) => {
+          if (loading) return <Text>Loading</Text>;
+          if (error) return <Text>{error.message}</Text>;
+
+          if (data) {
+            return <About allConducts={data.allConducts} />;
+          }
+
+          return <Text>Loading</Text>;
+        }}
+      </Query>
+    );
   }
 }
 

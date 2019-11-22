@@ -33,7 +33,7 @@ export const sharedNavigationOptions = navigation => ({
     <View style={{paddingLeft: 16}}>
       {navigation.routeName === 'Session' ? (
         <Icon
-          name={'chevron-left'}
+          name={'chevron-right'}
           onPress={() => {
             goBack();
           }}
@@ -41,7 +41,7 @@ export const sharedNavigationOptions = navigation => ({
       ) : (
         <Icon
           color="#fff"
-          name="md-menu"
+          name="logo-usd"
           size={50}
           style={({paddingLeft: 20}, {paddingRight: 20})}
           onPress={() => navigation.toggleDrawer()}

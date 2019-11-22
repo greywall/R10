@@ -18,3 +18,5 @@ const SessionListItem = ({item, navigation}) => (
 );
 
 export default withNavigation(SessionListItem);
+
+//

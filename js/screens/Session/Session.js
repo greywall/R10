@@ -1,22 +1,19 @@
 import React from 'react';
-import {Text, View} from 'react-native';
-import {Session_DATA} from '../../config/api';
-import {Query} from 'react-apollo';
+import {Text, ScrollView} from 'react-native';
+import moment from 'moment';
 
-const Session = () => {
-  return (
-    <Query query={Session_DATA}>
-      {({loading, error, data}) => {
-        if (loading) return <Text>Loading</Text>;
-        if (error) return <Text>{error.message}/</Text>;
-
-        if (data) {
-          return;
-          <View Session={data.Session((id: $id))} />;
-        }
-      }}
-    </Query>
-  );
+const Session = ({session, navigation}) => {
+  return <Text>Testing</Text>;
 };
 
 export default Session;
+
+{
+  /* <ScrollView>
+      <Text>{session.title}</Text>
+      <Text>{moment(session.startTime).format('hh:mm a')}</Text>
+      <Text>{session.description}</Text>
+      <Text>Presented by:</Text>
+      <Text>{session.location}</Text>
+    </ScrollView> */
+}

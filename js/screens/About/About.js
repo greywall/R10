@@ -8,8 +8,9 @@ import {
   Text,
   ScrollView,
 } from 'react-native';
+import ConductList from '../../components/ConductList';
 
-const About = () => {
+const About = ({allConducts}) => {
   return (
     <ScrollView style={styles.about}>
       <View style={styles.aboutImageView}>
@@ -37,10 +38,13 @@ const About = () => {
       </View>
 
       <View>
-        <Text style={styles.accordion}>Purpose</Text>
-        <Text style={styles.accordion}>Open Source Citizenship</Text>
-        <Text style={styles.accordion}>Expected Behavior</Text>
-        <Text style={styles.accordion}>Unacceptable Behaviour</Text>
+        {allConducts.map(conduct => (
+          <ConductList
+            key={conduct.id}
+            title={conduct.title}
+            description={conduct.description}
+          />
+        ))}
       </View>
     </ScrollView>
   );

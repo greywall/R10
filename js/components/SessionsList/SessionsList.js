@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  Platform,
-  SectionList,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {SectionList, Text} from 'react-native';
 import moment from 'moment';
-
 import SessionListItem from '../SessionListItem';
 
 const SessionsList = ({allSessions, navigation}) => (
@@ -18,6 +11,7 @@ const SessionsList = ({allSessions, navigation}) => (
     renderSectionHeader={({section: {title}}) => (
       <Text>{moment(title).format('hh:mm a')}</Text>
     )}
+    s
   />
 );
 

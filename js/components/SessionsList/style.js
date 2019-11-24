@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   session: {
-    backgroundColor: 'lightgrey',
+    backgroundColor: colors.lightGrey,
     fontSize: 20,
     paddingTop: 7,
     paddingBottom: 7,

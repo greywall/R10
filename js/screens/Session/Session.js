@@ -40,14 +40,21 @@ const Session = ({
 
       {session.speaker ? (
         <View>
-          <Text style={styles.speakerText}>Presented by:</Text>
-          <View style={styles.speakerContainer}>
-            <Image
-              style={styles.speakerImage}
-              source={{uri: session.speaker.image}}
-            />
-            <Text style={styles.speakerName}>{session.speaker.name}</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('Speaker', {
+                Speaker: session.speaker,
+              })
+            }>
+            <Text style={styles.speakerText}>Presented by:</Text>
+            <View style={styles.speakerContainer}>
+              <Image
+                style={styles.speakerImage}
+                source={{uri: session.speaker.image}}
+              />
+              <Text style={styles.speakerName}>{session.speaker.name}</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       ) : null}
 

@@ -7,6 +7,9 @@ import {SPEAKER_QUERY} from '../../config/api';
 import {FavesContext} from '../../context/FavesContext';
 
 class SessionContainer extends Component {
+  static navigationOptions = {
+    title: 'Session',
+  };
   render() {
     const id = this.props.navigation.getParam('id');
     return (

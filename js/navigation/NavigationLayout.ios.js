@@ -66,10 +66,10 @@ const MapStack = createStackNavigator(
 
 export default createBottomTabNavigator(
   {
-    About: AboutStack,
-    Faves: FavesStack,
-    Map: MapStack,
     Schedule: ScheduleStack,
+    Map: MapStack,
+    Faves: FavesStack,
+    About: AboutStack,
   },
   {
     defaultNavigationOptions: ({navigation}) => ({
@@ -77,13 +77,13 @@ export default createBottomTabNavigator(
         const {routeName} = navigation.state;
         let iconName;
         if (routeName === 'Schedule') {
-          iconName = `${focused ? 'ios-clock' : 'ios-calendar'}`;
+          iconName = 'ios-calendar';
         } else if (routeName === 'Map') {
           iconName = `${focused ? 'ios-pin' : 'ios-map'}`;
         } else if (routeName === 'Faves') {
           iconName = `${focused ? 'ios-heart' : 'ios-heart-empty'}`;
         } else if (routeName === 'About') {
-          iconName = `${focused ? 'ios-home' : 'ios-information-circle'}`;
+          iconName = 'ios-information-circle';
         }
         return <Ionicons name={iconName} size={25} color={tintColor} />;
       },
@@ -98,6 +98,8 @@ export default createBottomTabNavigator(
       },
       tabStyle: {
         backgroundColor: black,
+        height: 90,
+        paddingBottom: 25,
       },
     },
   },

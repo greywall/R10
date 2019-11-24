@@ -5,9 +5,9 @@ const styles = StyleSheet.create({
   session: {
     backgroundColor: 'lightgrey',
     fontSize: 20,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 20,
+    paddingTop: 7,
+    paddingBottom: 7,
+    paddingLeft: 10,
   },
 });
 

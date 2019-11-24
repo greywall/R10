@@ -10,7 +10,7 @@ const SessionsList = ({allSessions, navigation}) => (
     keyExtractor={(item, index) => item + index}
     renderItem={({item}) => <SessionListItem item={item} />}
     renderSectionHeader={({section: {title}}) => (
-      <Text style={styles.session}>{moment(title).format('hh:mm A')}</Text>
+      <Text style={styles.session}>{moment(title).format('h:mm A')}</Text>
     )}
     s
   />

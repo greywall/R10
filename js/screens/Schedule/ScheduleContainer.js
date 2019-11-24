@@ -1,23 +1,29 @@
 import React from 'react';
-import SectionList from 'react-native';
+import Schedule from './Schedule';
 import {ALL_DATA_QUERY} from '../../config/api';
 import {Query} from 'react-apollo';
 import {Text} from 'react-native';
-import Schedule from './Schedule';
+import {FavesContext} from '../../context/FavesContext';
 
 class ScheduleContainer extends React.Component {
   render() {
     return (
-      <Query query={ALL_DATA_QUERY}>
-        {({loading, error, data}) => {
-          if (loading) return <Text>Loading</Text>;
-          if (error) return <Text>{error.message}/</Text>;
+      <FavesContext.Consumer>
+        {({faveIds}) => (
+          <Query query={ALL_DATA_QUERY}>
+            {({loading, error, data}) => {
+              if (loading) return <Text>Loading</Text>;
+              if (error) return <Text>{error.message}/</Text>;
 
-          if (data) {
-            return <Schedule allSessions={data.allSessions} />;
-          }
-        }}
-      </Query>
+              if (data) {
+                return (
+                  <Schedule allSessions={data.allSessions} faveIds={faveIds} />
+                );
+              }
+            }}
+          </Query>
+        )}
+      </FavesContext.Consumer>
     );
   }
 }

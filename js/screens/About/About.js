@@ -8,7 +8,7 @@ import {
   Text,
   ScrollView,
 } from 'react-native';
-import ConductList from '../../components/ConductList';
+import ConductList2 from '../../components/ConductList2';
 
 const About = ({allConducts}) => {
   return (
@@ -39,13 +39,15 @@ const About = ({allConducts}) => {
 
       <View>
         {allConducts.map(conduct => (
-          <ConductList
+          <ConductList2
             key={conduct.id}
             title={conduct.title}
             description={conduct.description}
           />
         ))}
       </View>
+
+      <Text>Tal Grewal </Text>
     </ScrollView>
   );
 };

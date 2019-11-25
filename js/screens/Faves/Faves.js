@@ -2,8 +2,8 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import SessionList from '../../components/SessionsList';
 
-const Faves = ({favedSessions}) => {
-  console.log(favedSessions);
+const Faves = ({favedSessions = [], faveIds}) => {
+  console.log(favedSessions, 'Big Test');
   if (favedSessions.length === 0) {
     return (
       <View>
@@ -11,7 +11,7 @@ const Faves = ({favedSessions}) => {
       </View>
     );
   }
-  return <SessionList Sessions={favedSessions} faveIds={faveIds} />;
+  return <SessionList sessions={favedSessions} faveIds={faveIds} />;
 };
 
 export default Faves;

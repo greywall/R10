@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
+import {View, Text, SafeAreaView, StatusBar} from 'react-native';
 import RootStackNavigator from './navigation/RootStackNavigator';
 import {ApolloProvider} from 'react-apollo';
 import client from './config/api';
@@ -10,6 +10,7 @@ export default class App extends Component {
     return (
       <ApolloProvider client={client}>
         <FavesProvider>
+          <StatusBar barStyle="light-content" />
           <View style={{flex: 1}}>
             <RootStackNavigator />
           </View>

@@ -17,7 +17,9 @@ class FavesContainer extends React.Component {
                 const favedSessions = data.allSessions.filter(session => {
                   return faveIds.includes(session.id);
                 });
-                return <Faves favedSessions={favedSessions} />;
+                return (
+                  <Faves favedSessions={favedSessions} faveIds={faveIds} />
+                );
               }
             }}
           </Query>

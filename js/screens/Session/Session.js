@@ -61,6 +61,17 @@ const Session = ({
           start={{x: 0.0, y: 0.2}}
           end={{x: 0.5, y: 1.9}}
           style={styles.buttonStyle}>
+          <TouchableOpacity onPress={() => removeFaveSessionId(session.id)}>
+            <Text style={styles.buttonText}>Remove to Faves</Text>
+          </TouchableOpacity>
+        </LinearGradient>
+      </View>
+      <View style={styles.button}>
+        <LinearGradient
+          colors={[colors.purple, colors.blue]}
+          start={{x: 0.0, y: 0.2}}
+          end={{x: 0.5, y: 1.9}}
+          style={styles.buttonStyle}>
           <TouchableOpacity onPress={() => addFaveSessionId(session.id)}>
             <Text style={styles.buttonText}>Add to Faves</Text>
           </TouchableOpacity>
@@ -71,5 +82,3 @@ const Session = ({
 };
 
 export default Session;
-
-//onPress={() => addFaveSessionId(session.id)}

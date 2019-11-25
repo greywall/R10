@@ -17,7 +17,7 @@ class ScheduleContainer extends React.Component {
 
               if (data) {
                 return (
-                  <Schedule allSessions={data.allSessions} faveIds={faveIds} />
+                  <Schedule Sessions={data.allSessions} faveIds={faveIds} />
                 );
               }
             }}

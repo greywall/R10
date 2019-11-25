@@ -50,5 +50,3 @@ export const sharedNavigationOptions = navigation => ({
     </View>
   ),
 });
-
-// routeName

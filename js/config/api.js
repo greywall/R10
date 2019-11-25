@@ -54,15 +54,3 @@ export const CONDUCT_QUERY = gql`
     }
   }
 `;
-
-export const SPEAKER_QUERY = gql`
-  query Speaker($id: ID!) {
-    Speaker(id: $id) {
-      id
-      bio
-      image
-      name
-      url
-    }
-  }
-`;

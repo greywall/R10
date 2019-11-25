@@ -2,8 +2,10 @@ import React from 'react';
 import SessionList from '../../components/SessionsList/';
 import {formatSessionData} from '../../lib/helpers';
 
-const Schedule = ({allSessions}) => {
-  return <SessionList allSessions={formatSessionData(allSessions)} />;
+const Schedule = ({Sessions, faveIds}) => {
+  return (
+    <SessionList Sessions={formatSessionData(Sessions)} faveIds={faveIds} />
+  );
 };
 
 export default Schedule;

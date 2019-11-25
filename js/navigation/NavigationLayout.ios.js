@@ -90,8 +90,8 @@ export default createBottomTabNavigator(
     }),
 
     tabBarOptions: {
-      activeTintColor: coralblue,
-      inactiveTintColor: lightGrey,
+      activeTintColor: lightGrey,
+      inactiveTintColor: mediumGrey,
       labelStyle: {
         fontSize: 10,
         fontFamily: typography.fontMain,

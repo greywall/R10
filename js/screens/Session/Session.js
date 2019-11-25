@@ -8,7 +8,6 @@ import {
   Image,
 } from 'react-native';
 import moment from 'moment';
-import {SPEAKER_QUERY} from '../../config/api';
 import Query from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -22,15 +21,16 @@ const Session = ({
   addFaveSessionId,
   removeFaveSessionId,
 }) => {
+  // console.log(session.speaker);
   return (
     <ScrollView style={styles.sessionPage}>
       <View style={styles.locationContainer}>
         <Text style={styles.locationText}>{session.location}</Text>
 
-        <Icon name={'ios-heart'} size={25} color="red" />
-        {/* {faveIds.includes(session.id) ? (
+        {/* <Icon name={'ios-heart'} size={25} color="red" /> */}
+        {faveIds.includes(session.id) ? (
           <Icon name={'ios-heart'} size={25} color="red" />
-        ) : null} */}
+        ) : null}
       </View>
       <Text style={styles.title}>{session.title}</Text>
       <Text style={styles.time}>
@@ -61,11 +61,11 @@ const Session = ({
       <View style={styles.button}>
         <LinearGradient
           colors={[colors.purple, colors.blue]}
-          start={{x: 0.0, y: 0.9}}
-          end={{x: 2.2, y: 0.1}}
+          start={{x: 0.0, y: 0.2}}
+          end={{x: 0.5, y: 1.9}}
           style={styles.buttonStyle}>
           <TouchableOpacity onPress={() => addFaveSessionId(session.id)}>
-            <Text style={styles.buttonText}>Remove from Faves</Text>
+            <Text style={styles.buttonText}>Add to Faves</Text>
           </TouchableOpacity>
         </LinearGradient>
       </View>

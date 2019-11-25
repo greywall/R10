@@ -4,9 +4,9 @@ import moment from 'moment';
 import SessionListItem from '../SessionListItem';
 import styles from './style';
 
-const SessionsList = ({allSessions, navigation}) => (
+const SessionsList = ({Sessions, navigation}) => (
   <SectionList
-    sections={allSessions}
+    sections={Sessions}
     keyExtractor={(item, index) => item + index}
     renderItem={({item}) => <SessionListItem item={item} />}
     renderSectionHeader={({section: {title}}) => (

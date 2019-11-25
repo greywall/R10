@@ -13,11 +13,10 @@ class FavesContainer extends React.Component {
             {({loading, error, data}) => {
               if (loading) return <Text>Loading</Text>;
               if (error) return <Text>{error.message}</Text>;
-              console.log(data);
               if (data) {
-                // const favedSessions = data.allSessions.filter(session => {
-                //   return faveIds.includes(session.id);
-                // });
+                const favedSessions = data.allSessions.filter(session => {
+                  return faveIds.includes(session.id);
+                });
               }
               return <Faves favedSessions={favedSessions} faveIds={faveIds} />;
             }}

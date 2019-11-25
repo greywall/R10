@@ -21,14 +21,13 @@ const Session = ({
   addFaveSessionId,
   removeFaveSessionId,
 }) => {
-  // console.log(session.speaker);
-  console.log(session.id);
+  console.log(session.speaker);
+  // console.log(session.id);
   return (
     <ScrollView style={styles.sessionPage}>
       <View style={styles.locationContainer}>
         <Text style={styles.locationText}>{session.location}</Text>
 
-        {/* <Icon name={'ios-heart'} size={25} color="red" /> */}
         {faveIds.includes(session.id) ? (
           <Icon name={'ios-heart'} size={25} color="red" />
         ) : null}
@@ -42,11 +41,10 @@ const Session = ({
       {session.speaker ? (
         <View>
           <TouchableOpacity
-            onPress={() =>
-              navigation.navigate('Speaker', {
-                Speaker: session.speaker,
-              })
-            }>
+            onPress={() => {
+              navigation.navigate('Speaker', [session.speaker]);
+            }}>
+            {/* This doesn't work!!!!! */}
             <Text style={styles.speakerText}>Presented by:</Text>
             <View style={styles.speakerContainer}>
               <Image

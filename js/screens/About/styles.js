@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import {colors} from '../../config/styles';
 
 const styles = StyleSheet.create({
   loading: {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     fontSize: 18,
-    paddingTop: 5,
+    paddingTop: 15,
     paddingBottom: 5,
     fontWeight: '300',
   },
@@ -32,13 +33,27 @@ const styles = StyleSheet.create({
     fontSize: 35,
     paddingTop: 5,
     paddingBottom: 5,
-    color: 'grey',
+    color: 'black',
   },
   accordion: {
     color: 'purple',
     fontSize: 20,
     paddingTop: 5,
     paddingBottom: 5,
+  },
+  copyright: {
+    fontSize: 20,
+    paddingLeft: 20,
+  },
+  copyrightContainer: {
+    borderTopWidth: 1,
+    borderTopColor: colors.mediumGrey,
+    marginTop: 15,
+    marginBottom: 30,
+    paddingTop: 30,
+  },
+  allConduct: {
+    marginBottom: 30,
   },
 });
 

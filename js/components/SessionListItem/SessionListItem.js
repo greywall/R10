@@ -12,10 +12,10 @@ const SessionListItem = ({item, navigation, faveIds}) => (
       <Text style={styles.headingText}>{item.title}</Text>
       <View style={styles.flexContainer}>
         <Text style={styles.location}>{item.location}</Text>
-        <Ionicons name={'ios-heart'} size={25} color={'red'} />
-        {/* {faveIds.includes(item.id) ? (
+
+        {faveIds.includes(item.id) ? (
           <Ionicons name={'ios-heart'} size={25} color={'red'} />
-        ) : null} */}
+        ) : null}
       </View>
     </View>
   </TouchableOpacity>

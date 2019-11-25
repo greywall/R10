@@ -22,6 +22,7 @@ const Session = ({
   removeFaveSessionId,
 }) => {
   // console.log(session.speaker);
+  console.log(session.id);
   return (
     <ScrollView style={styles.sessionPage}>
       <View style={styles.locationContainer}>

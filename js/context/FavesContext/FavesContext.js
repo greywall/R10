@@ -11,13 +11,13 @@ class FavesProvider extends Component {
   }
 
   componentDidMount() {
-    this.getFaveSessionId();
+    this.getFavedSessionId();
   }
 
-  getFaveSessionId = async () => {
+  getFavedSessionId = async () => {
     try {
       const faves = await getAllFaves();
-      const ids = faves.map(fave => fave[0]);
+      const faveIds = faves.map(fave => fave[0]);
       this.setState({faveIds});
     } catch (e) {
       console.log(e);
@@ -30,7 +30,7 @@ class FavesProvider extends Component {
       if (newFav) {
         this.setState({faveIds: [...this.state.faveIds, newfav.Id]});
       }
-      this.getFaveSessionId();
+      this.getFavedSessionId();
     } catch (e) {
       console.log(e);
     }
@@ -39,7 +39,7 @@ class FavesProvider extends Component {
   removeFaveSessionId = async sessionId => {
     try {
       await removeFaves(sessionId);
-      this.getFaveSessionId();
+      this.getFavedSessionId();
     } catch (e) {
       console.log(e);
     }
@@ -50,8 +50,8 @@ class FavesProvider extends Component {
       <FavesContext.Provider
         value={{
           ...this.state,
-          addFaveSessionId: this.addFaves,
-          removeFaveSessionId: this.removeFaves,
+          addFaveSessionId: this.addFaveSessionId,
+          removeFaveSessionId: this.removeFaveSessionId,
         }}>
         {this.props.children}
       </FavesContext.Provider>

@@ -10,12 +10,6 @@ import SafeAreaView from 'react-native-safe-area-view';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Speaker = ({speaker, navigation}) => {
-  // console.log(speaker.name);
-  // console.log(speaker);
-  // console.log(speaker.state.params[0]);
-  // console.log(speaker.state.params[0].bio);
-  console.log(speaker.state.params[0].url);
-
   return (
     <SafeAreaView style={styles.speakerContainer}>
       <View style={styles.outsideMain}>

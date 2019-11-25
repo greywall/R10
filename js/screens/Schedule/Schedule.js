@@ -2,9 +2,9 @@ import React from 'react';
 import SessionList from '../../components/SessionsList/';
 import {formatSessionData} from '../../lib/helpers';
 
-const Schedule = ({Sessions, faveIds}) => {
+const Schedule = ({sessions, faveIds}) => {
   return (
-    <SessionList Sessions={formatSessionData(Sessions)} faveIds={faveIds} />
+    <SessionList sessions={formatSessionData(sessions)} faveIds={faveIds} />
   );
 };
 

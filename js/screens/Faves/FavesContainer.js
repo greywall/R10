@@ -1,7 +1,7 @@
 import React from 'react';
 import Faves from './Faves';
 import {FavesContext} from '../../context/FavesContext';
-import {All_DATA_QUERY, ALL_DATA_QUERY} from '../../config/api';
+import {ALL_DATA_QUERY} from '../../config/api';
 import {Query} from 'react-apollo';
 
 class FavesContainer extends React.Component {
@@ -17,8 +17,8 @@ class FavesContainer extends React.Component {
                 const favedSessions = data.allSessions.filter(session => {
                   return faveIds.includes(session.id);
                 });
+                return <Faves favedSessions={favedSessions} />;
               }
-              return <Faves favedSessions={favedSessions} faveIds={faveIds} />;
             }}
           </Query>
         )}

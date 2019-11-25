@@ -11,6 +11,7 @@ class SessionContainer extends Component {
   };
   render() {
     const id = this.props.navigation.getParam('id');
+
     return (
       <FavesContext.Consumer>
         {({faveIds, addFaveSessionId, removeFaveSessionId}) => (
@@ -18,7 +19,7 @@ class SessionContainer extends Component {
             {({loading, error, data}) => {
               if (loading) return <Text>Loading</Text>;
               if (error) return <Text>{error.message}/</Text>;
-              console.log(data.Session.speaker);
+              console.log(faveIds);
               return (
                 <Session
                   session={data.Session}

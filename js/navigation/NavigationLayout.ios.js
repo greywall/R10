@@ -41,6 +41,7 @@ const AboutStack = createStackNavigator(
 const FavesStack = createStackNavigator(
   {
     Faves: Faves,
+    Session: Session,
   },
   {
     defaultNavigationOptions: ({navigation}) => ({

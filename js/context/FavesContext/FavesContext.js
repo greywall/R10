@@ -17,6 +17,7 @@ class FavesProvider extends Component {
   getFavedSessionId = async () => {
     try {
       const faves = await getAllFaves();
+      console.log(faves);
       const faveIds = faves.map(fave => fave[0]);
       this.setState({faveIds});
     } catch (e) {

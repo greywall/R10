@@ -91,22 +91,22 @@ AboutStack.navigationOptions = {
 
 export default createDrawerNavigator(
   {
-    About: {
-      screen: AboutStack,
-    },
-    Faves: {
-      screen: FavesStack,
+    Schedule: {
+      screen: ScheduleStack,
     },
     Map: {
       screen: MapStack,
     },
-    Schedule: {
-      screen: ScheduleStack,
+    Faves: {
+      screen: FavesStack,
+    },
+    About: {
+      screen: AboutStack,
     },
   },
   {
     tabBarOptions: {
-      activeTintColor: coralblue,
+      activeTintColor: mediumGrey,
       inactiveTintColor: lightGrey,
       labelStyle: {
         fontSize: 10,

@@ -9,13 +9,6 @@ import {
 } from 'react-native';
 import styles from './styles';
 
-if (
-  Platform.OS === 'android' &&
-  UIManager.setLayoutAnimationEnabledExperimental
-) {
-  UIManager.setLayoutAnimationEnabledExperimental(true);
-}
-
 export default class ConductList extends Component {
   constructor(props) {
     super(props);

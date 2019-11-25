@@ -21,8 +21,7 @@ const Session = ({
   addFaveSessionId,
   removeFaveSessionId,
 }) => {
-  console.log(session.speaker);
-  // console.log(session.id);
+  console.log(session);
   return (
     <ScrollView style={styles.sessionPage}>
       <View style={styles.locationContainer}>
@@ -44,7 +43,6 @@ const Session = ({
             onPress={() => {
               navigation.navigate('Speaker', [session.speaker]);
             }}>
-            {/* This doesn't work!!!!! */}
             <Text style={styles.speakerText}>Presented by:</Text>
             <View style={styles.speakerContainer}>
               <Image
@@ -73,3 +71,5 @@ const Session = ({
 };
 
 export default Session;
+
+//onPress={() => addFaveSessionId(session.id)}

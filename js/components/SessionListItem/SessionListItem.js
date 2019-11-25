@@ -20,7 +20,4 @@ const SessionListItem = ({item, navigation, faveIds}) => (
     </View>
   </TouchableOpacity>
 );
-
 export default withNavigation(SessionListItem);
-
-//

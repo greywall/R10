@@ -37,7 +37,7 @@ const About = ({allConducts}) => {
         <Text style={styles.heading}>Code of Conduct</Text>
       </View>
 
-      <View>
+      <View style={styles.allConduct}>
         {allConducts.map(conduct => (
           <ConductList
             key={conduct.id}

@@ -14,10 +14,9 @@ class ScheduleContainer extends React.Component {
             {({loading, error, data}) => {
               if (loading) return <Text>Loading</Text>;
               if (error) return <Text>{error.message}/</Text>;
-
               if (data) {
                 return (
-                  <Schedule Sessions={data.allSessions} faveIds={faveIds} />
+                  <Schedule sessions={data.allSessions} faveIds={faveIds} />
                 );
               }
             }}

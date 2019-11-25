@@ -17,10 +17,12 @@ export const addFaves = async favId => {
 export const getAllFaves = async () => {
   try {
     const keys = await AsyncStorage.getAllKeys();
-    const values = AsyncStorage.multiGet(keys);
+    const values = await AsyncStorage.multiGet(keys);
+    console.log(values, 'VALUES');
     return values.filter(value => value[1].includes('faved_on'));
   } catch (e) {
-    return false;
+    console.log(e);
+    return [];
   }
 
   console.log('Done.');

@@ -41,7 +41,7 @@ export const sharedNavigationOptions = navigation => ({
       ) : (
         <Icon
           color="#fff"
-          name="logo-usd"
+          name="md-menu"
           size={50}
           style={({paddingLeft: 20}, {paddingRight: 20})}
           onPress={() => navigation.toggleDrawer()}

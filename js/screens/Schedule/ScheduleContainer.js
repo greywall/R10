@@ -4,6 +4,7 @@ import {ALL_DATA_QUERY} from '../../config/api';
 import {Query} from 'react-apollo';
 import {Text} from 'react-native';
 import {FavesContext} from '../../context/FavesContext';
+import Loader from '../../components/Loader';
 
 class ScheduleContainer extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class ScheduleContainer extends React.Component {
         {({faveIds}) => (
           <Query query={ALL_DATA_QUERY}>
             {({loading, error, data}) => {
-              if (loading) return <Text>Loading</Text>;
+              if (loading) return <Loader />;
               if (error) return <Text>{error.message}/</Text>;
               if (data) {
                 return (

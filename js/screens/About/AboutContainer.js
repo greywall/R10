@@ -4,6 +4,7 @@ import About from './About';
 import styles from './styles';
 import {CONDUCT_QUERY} from '../../config/api';
 import {Query} from 'react-apollo';
+import Loader from '../../components/Loader';
 
 class AboutContainer extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class AboutContainer extends React.Component {
     return (
       <Query query={CONDUCT_QUERY}>
         {({loading, error, data}) => {
-          if (loading) return <Text>Loading</Text>;
+          if (loading) return <Loader />;
           if (error) return <Text>{error.message}</Text>;
 
           if (data) {

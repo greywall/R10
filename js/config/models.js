@@ -18,7 +18,7 @@ export const getAllFaves = async () => {
   try {
     const keys = await AsyncStorage.getAllKeys();
     const values = await AsyncStorage.multiGet(keys);
-    console.log(values, 'VALUES');
+    // console.log(values, 'VALUES');
     return values.filter(value => value[1].includes('faved_on'));
   } catch (e) {
     console.log(e);
@@ -30,7 +30,7 @@ export const getAllFaves = async () => {
 
 export const removeFaves = async favId => {
   try {
-    const fav = await AsyncStorage.removeItem`${favId}`;
+    const fav = await AsyncStorage.removeItem(`${favId}`);
     return fav;
   } catch (e) {
     console.log(e + 'Could not remove item');

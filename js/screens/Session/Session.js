@@ -36,7 +36,6 @@ const Session = ({
         {moment(session.startTime).format('h:mm A')}
       </Text>
       <Text style={styles.description}>{session.description}</Text>
-
       {session.speaker ? (
         <View>
           <TouchableOpacity
@@ -52,31 +51,32 @@ const Session = ({
               <Text style={styles.speakerName}>{session.speaker.name}</Text>
             </View>
           </TouchableOpacity>
+
+          <View style={styles.button}>
+            <LinearGradient
+              colors={[colors.purple, colors.blue]}
+              start={{x: 0.0, y: 0.2}}
+              end={{x: 0.5, y: 1.9}}
+              style={styles.buttonStyle}>
+              <TouchableOpacity onPress={() => removeFaveSessionId(session.id)}>
+                <Text style={styles.buttonText}>Remove from Faves</Text>
+              </TouchableOpacity>
+            </LinearGradient>
+          </View>
+
+          <View style={styles.button}>
+            <LinearGradient
+              colors={[colors.purple, colors.blue]}
+              start={{x: 0.0, y: 0.2}}
+              end={{x: 0.5, y: 1.9}}
+              style={styles.buttonStyle}>
+              <TouchableOpacity onPress={() => addFaveSessionId(session.id)}>
+                <Text style={styles.buttonText}>Add to Faves</Text>
+              </TouchableOpacity>
+            </LinearGradient>
+          </View>
         </View>
       ) : null}
-
-      <View style={styles.button}>
-        <LinearGradient
-          colors={[colors.purple, colors.blue]}
-          start={{x: 0.0, y: 0.2}}
-          end={{x: 0.5, y: 1.9}}
-          style={styles.buttonStyle}>
-          <TouchableOpacity onPress={() => removeFaveSessionId(session.id)}>
-            <Text style={styles.buttonText}>Remove to Faves</Text>
-          </TouchableOpacity>
-        </LinearGradient>
-      </View>
-      <View style={styles.button}>
-        <LinearGradient
-          colors={[colors.purple, colors.blue]}
-          start={{x: 0.0, y: 0.2}}
-          end={{x: 0.5, y: 1.9}}
-          style={styles.buttonStyle}>
-          <TouchableOpacity onPress={() => addFaveSessionId(session.id)}>
-            <Text style={styles.buttonText}>Add to Faves</Text>
-          </TouchableOpacity>
-        </LinearGradient>
-      </View>
     </ScrollView>
   );
 };

@@ -13,6 +13,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 import {colors, typography} from '../../config/styles';
+import PropTypes from 'prop-types';
 
 const Session = ({
   session,
@@ -82,6 +83,12 @@ const Session = ({
       ) : null}
     </ScrollView>
   );
+};
+
+Session.propTypes = {
+  session: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired,
+  faveIds: PropTypes.array.isRequired,
 };
 
 export default Session;

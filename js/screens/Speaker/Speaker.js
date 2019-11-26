@@ -8,6 +8,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import {colors, typography} from '../../config/styles';
 import SafeAreaView from 'react-native-safe-area-view';
 import Icon from 'react-native-vector-icons/Ionicons';
+import PropTypes from 'prop-types';
 
 const Speaker = ({speaker, navigation}) => {
   return (
@@ -47,6 +48,11 @@ const Speaker = ({speaker, navigation}) => {
       </View>
     </SafeAreaView>
   );
+};
+
+Speaker.propTypes = {
+  speaker: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default withNavigation(Speaker);

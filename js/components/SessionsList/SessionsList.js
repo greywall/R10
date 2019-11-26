@@ -4,6 +4,7 @@ import moment from 'moment';
 import SessionListItem from '../SessionListItem';
 import styles from './style';
 import {formatSessionData} from '../../lib/helpers';
+import PropTypes from 'prop-types';
 
 const SessionsList = ({sessions, navigation, faveIds}) => {
   return (

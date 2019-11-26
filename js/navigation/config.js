@@ -6,6 +6,7 @@ import {colors, typography} from '../config/styles';
 const {white, purple, red} = colors;
 import Icon from 'react-native-vector-icons/Ionicons';
 import {Platform} from 'react-native';
+import PropTypes from 'prop-types';
 
 const GradientHeader = props => (
   <View style={{backgroundColor: white, overflow: 'hidden'}}>
@@ -41,3 +42,8 @@ export const sharedNavigationOptions = navigation => ({
       </View>
     ),
 });
+
+GradientHeader.propTypes = {
+  props: PropTypes.object,
+  navigation: PropTypes.object.isRequired,
+};

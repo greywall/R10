@@ -9,6 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 import ConductList from '../../components/ConductList';
+import PropTypes from 'prop-types';
 
 const About = ({allConducts}) => {
   return (
@@ -52,6 +53,10 @@ const About = ({allConducts}) => {
       </View>
     </ScrollView>
   );
+};
+
+About.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default About;

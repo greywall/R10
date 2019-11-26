@@ -3,6 +3,7 @@ import {TouchableOpacity, SectionList, Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {withNavigation} from 'react-navigation';
 import styles from './style';
+import PropTypes from 'prop-types';
 
 const SessionListItem = ({item, navigation, faveIds}) => (
   <TouchableOpacity
@@ -20,4 +21,5 @@ const SessionListItem = ({item, navigation, faveIds}) => (
     </View>
   </TouchableOpacity>
 );
+
 export default withNavigation(SessionListItem);

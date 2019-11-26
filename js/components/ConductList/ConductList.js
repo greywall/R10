@@ -8,6 +8,7 @@ import {
   Animated,
 } from 'react-native';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 export default class ConductList extends Component {
   constructor(props) {

@@ -1,14 +1,6 @@
 import React from 'react';
-import {
-  Text,
-  ScrollView,
-  Platform,
-  TouchableOpacity,
-  View,
-  Image,
-} from 'react-native';
+import {Text, ScrollView, TouchableOpacity, View, Image} from 'react-native';
 import moment from 'moment';
-import Query from 'react-apollo';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
@@ -22,7 +14,6 @@ const Session = ({
   addFaveSessionId,
   removeFaveSessionId,
 }) => {
-  console.log(session);
   return (
     <ScrollView style={styles.sessionPage}>
       <View style={styles.locationContainer}>

@@ -1,5 +1,5 @@
-import {StyleSheet, Platform} from 'react-native';
-import {colors, typography} from '../../config/styles';
+import {StyleSheet} from 'react-native';
+import {colors} from '../../config/styles';
 
 const styles = StyleSheet.create({
   speakerContainer: {

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {
   TouchableOpacity,
-  SectionList,
   Text,
   View,
   LayoutAnimation,
@@ -65,7 +64,7 @@ export default class ConductList extends Component {
   }
 }
 
-CodeOfConduct.propTypes = {
+ConductList.propTypes = {
   expanded: PropTypes.bool,
   sign: PropTypes.bool,
 };

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {colors, typography} from '../../config/styles';
+import {colors} from '../../config/styles';
 
 const styles = StyleSheet.create({
   heading: {

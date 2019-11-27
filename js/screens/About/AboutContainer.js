@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
 import About from './About';
-import styles from './styles';
 import {CONDUCT_QUERY} from '../../config/api';
 import {Query} from 'react-apollo';
 import Loader from '../../components/Loader';

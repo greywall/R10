@@ -1,6 +1,5 @@
-import {StyleSheet, Platform} from 'react-native';
-import {colors, typography} from '../../config/styles';
-import {red} from 'ansi-colors';
+import {StyleSheet} from 'react-native';
+import {colors} from '../../config/styles';
 
 const styles = StyleSheet.create({
   speakerImage: {
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
   time: {
-    color: colors.red,
+    color: 'red',
     fontSize: 25,
     paddingBottom: 10,
   },

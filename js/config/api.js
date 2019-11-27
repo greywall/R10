@@ -1,5 +1,4 @@
 import ApolloClient from 'apollo-boost';
-var {graphql, buildSchema} = require('graphql');
 import {gql} from 'apollo-boost';
 
 export default new ApolloClient({

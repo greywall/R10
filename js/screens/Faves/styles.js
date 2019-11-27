@@ -8,6 +8,15 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     textAlign: 'center',
   },
+  errorMessage: {
+    justifyContent: 'center',
+
+    marginTop: 'auto',
+    marginBottom: 'auto',
+  },
+  errorText: {
+    textAlign: 'center',
+  },
 });
 
 export default styles;

@@ -33,7 +33,7 @@ export const removeFaves = async favId => {
     const fav = await AsyncStorage.removeItem(`${favId}`);
     return fav;
   } catch (e) {
-    console.log(e + 'Could not remove item');
+    console.log(e);
     return false;
   }
 

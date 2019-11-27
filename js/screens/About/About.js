@@ -1,13 +1,6 @@
 import React from 'react';
 import styles from './styles';
-import {
-  View,
-  StyleSheet,
-  FlatList,
-  Image,
-  Text,
-  ScrollView,
-} from 'react-native';
+import {View, Image, Text, ScrollView} from 'react-native';
 import ConductList from '../../components/ConductList';
 import PropTypes from 'prop-types';
 

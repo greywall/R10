@@ -1,8 +1,8 @@
 import React from 'react';
-import {SectionList, Text, View} from 'react-native';
+import {SectionList, Text} from 'react-native';
 import moment from 'moment';
 import SessionListItem from '../SessionListItem';
-import styles from './style';
+import styles from './styles';
 import {formatSessionData} from '../../lib/helpers';
 import PropTypes from 'prop-types';
 
@@ -23,7 +23,7 @@ const SessionsList = ({sessions, faveIds}) => {
   );
 };
 
-SessionList.propTypes = {
+SessionsList.propTypes = {
   sessions: PropTypes.array,
   faveIds: PropTypes.array.isRequired,
 };

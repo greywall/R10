@@ -57,3 +57,10 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+
+# Yarn Lock
+*/yarn.lock
+
+# Prettier
+*prettierrc.js

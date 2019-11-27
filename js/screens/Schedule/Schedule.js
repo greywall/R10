@@ -1,6 +1,5 @@
 import React from 'react';
 import SessionList from '../../components/SessionsList/';
-import {formatSessionData} from '../../lib/helpers';
 import PropTypes from 'prop-types';
 
 const Schedule = ({sessions, faveIds}) => {

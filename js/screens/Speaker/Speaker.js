@@ -2,12 +2,10 @@ import React from 'react';
 import {Text, View, ScrollView, Image, Linking} from 'react-native';
 import {withNavigation} from 'react-navigation';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {isTemplateElement} from '@babel/types';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
-import {colors, typography} from '../../config/styles';
+import {colors} from '../../config/styles';
 import SafeAreaView from 'react-native-safe-area-view';
-import Icon from 'react-native-vector-icons/Ionicons';
 import PropTypes from 'prop-types';
 
 const Speaker = ({speaker, navigation}) => {

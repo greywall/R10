@@ -1,8 +1,8 @@
 import React from 'react';
-import {TouchableOpacity, SectionList, Text, View} from 'react-native';
+import {TouchableOpacity, Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {withNavigation} from 'react-navigation';
-import styles from './style';
+import styles from './styles';
 import PropTypes from 'prop-types';
 
 const SessionListItem = ({item, navigation, faveIds}) => (

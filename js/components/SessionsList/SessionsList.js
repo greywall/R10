@@ -6,7 +6,7 @@ import styles from './style';
 import {formatSessionData} from '../../lib/helpers';
 import PropTypes from 'prop-types';
 
-const SessionsList = ({sessions, navigation, faveIds}) => {
+const SessionsList = ({sessions, faveIds}) => {
   return (
     sessions && (
       <SectionList
@@ -21,6 +21,11 @@ const SessionsList = ({sessions, navigation, faveIds}) => {
       />
     )
   );
+};
+
+SessionList.propTypes = {
+  sessions: PropTypes.array,
+  faveIds: PropTypes.array.isRequired,
 };
 
 export default SessionsList;

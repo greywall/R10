@@ -64,3 +64,8 @@ export default class ConductList extends Component {
     );
   }
 }
+
+CodeOfConduct.propTypes = {
+  expanded: PropTypes.bool,
+  sign: PropTypes.bool,
+};

@@ -22,4 +22,10 @@ const SessionListItem = ({item, navigation, faveIds}) => (
   </TouchableOpacity>
 );
 
+SessionListItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired,
+  faveIds: PropTypes.array.isRequired,
+};
+
 export default withNavigation(SessionListItem);

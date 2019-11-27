@@ -20,7 +20,7 @@ class SessionContainer extends Component {
             {({loading, error, data}) => {
               if (loading) return <Loader />;
               if (error) return <Text>{error.message}/</Text>;
-              console.log(faveIds);
+              
               return (
                 <Session
                   session={data.Session}
